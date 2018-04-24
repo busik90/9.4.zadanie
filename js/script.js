@@ -66,10 +66,40 @@ function treeLyingRight(height) {
 			for (var j = 1; j <= i; j++) {
 				row += '*';
 			}
+
 			console.log(row);
 			continue;
 		}
 		else {
+			for (var j = 1; j <= 2*height-i; j++) {
+				row += '*';
+			}
+			
+			console.log(row);
+		}
+	}
+}
+
+function treeLyingLeft(height) {
+	for (var i = 1; i <= 2*height-1; i++) {
+		var row = '';
+		
+		if (i <= height) {
+			for (var j = 1; j <= height-i; j++) {
+				row += ' ';
+			}
+
+			for (var j = 1; j <= i; j++) {
+				row += '*';
+			}
+			console.log(row);
+			continue;
+		}
+		else {
+			for (var j = 1; j <= i-height; j++) {
+				row += ' ';
+			}
+
 			for (var j = 1; j <= 2*height-i; j++) {
 				row += '*';
 			}
@@ -103,3 +133,9 @@ console.log('-----------------------------');
 console.log();
 
 treeLyingRight(5);
+
+console.log();
+console.log('-----------------------------');
+console.log();
+
+treeLyingLeft(5);
