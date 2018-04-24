@@ -5,7 +5,7 @@ function treeRightSide(height) {
 		for (var j = 1; j <= i; j++) {
 				star += '*';
 		}
-		
+
 		console.log(star);
 	}
 }
@@ -42,6 +42,22 @@ function treeBothSides(height) {
 	}
 }
 
+function treeBothSidesBackward(height) {
+	for (var i = 1; i <= height; i++) {
+		var row = '';
+		
+		for (var j = 1; j <= i - 1; j++) {
+			row += ' ';
+		}
+		
+		for (var k = 1; k <= height*2-i*2+1; k++) {
+			row += '*';
+		}
+
+		console.log(row);
+	}
+}
+
 treeRightSide(5);
 
 console.log();
@@ -55,3 +71,9 @@ console.log('-----------------------------');
 console.log();
 
 treeBothSides(5);
+
+console.log();
+console.log('-----------------------------');
+console.log();
+
+treeBothSidesBackward(5);
